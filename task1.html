@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+
+
+    <style>
+        body {
+            margin: 0%;
+           background-color: rgb(235, 233, 233);
+        }
+
+
+        .one {
+            background-color: rgb(15, 17, 17);
+            color: white;
+            height: 60px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+        }
+
+        .one ul {
+            margin: 0px;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-color: 2px solid rgb(82, 18, 18);
+        }
+
+        .one img {
+            display: flex;
+            padding-top: 2px;
+            padding-left: 2px;
+            height: 35px;
+            width: 110px;
+            margin-top: 8px;
+            margin-left: 3px;
+
+        }
+
+        .one li {
+            margin-top: 3px;
+        }
+
+        .tleft li {
+            margin-left: 30px;
+        }
+
+        .tright li {
+            margin-right: 40px;
+            padding: 0px;
+        }
+
+        .tleft {
+            list-style: none;
+            float: left;
+            overflow: auto;
+            display: flex;
+
+        }
+
+
+        .tright {
+            list-style: none;
+            float: right;
+            overflow: auto;
+            display: flex;
+
+        }
+
+        .tsearch {
+            background-color: white;
+            color: rgb(80, 78, 78);
+            border-radius: 5px;
+            width: 780px;
+            height: 35px;
+            position: absolute;
+            top: 8px;
+            left: 310px;
+
+        }
+
+        button {
+            display: flex;
+            position: absolute;
+            width: 24px;
+            background-color: transparent;
+            margin-left: 1050px;
+            margin-top: 0px;
+            border: 0px solid transparent;
+        }
+
+        .two {
+            background-color: rgb(47, 47, 86);
+            color: white;
+            height: 40px;
+        }
+
+        .two li {
+            float: left;
+            list-style: none;
+            font-size: 17px;
+            margin-left: 22px;
+            cursor: pointer;
+            padding-top: 2px;
+            font-weight: 100;
+            margin-top: 5px;
+        }
+
+
+        .two ul {
+            overflow: auto;
+            margin: 0px;
+        }
+
+
+        .container {
+            width: 100%;
+            margin-top: 50px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            width: 100%;
+            display: flex;
+            animation: slide 16s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translate(0);
+            }
+
+            25% {
+                transform: translate(0);
+            }
+
+            30% {
+                transform: translate(-100%);
+            }
+
+            50% {
+                transform: translate(-100%);
+            }
+
+            55% {
+                transform: translate(-200%);
+            }
+
+            75% {
+                transform: translate(-200%);
+            }
+
+            80% {
+                transform: translate(-300%);
+            }
+
+            100% {
+                transform: translate(-300%);
+            }
+
+        }
+
+        .wrapper img {
+            width: 100%;
+        }
+
+        .box {
+            margin-top: 250px;
+            background-color: transparent;
+            float: left;
+            display: flex;
+            position: absolute;
+            margin-left: 13px;
+            font-size: 22px;
+            font-weight: bold;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #box1 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+
+        }
+
+        #box2 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+        }
+
+
+        #box3 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+        }
+
+
+        #box4 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+        }
+
+
+        #box5 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+        }
+
+
+
+        #box6 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+        }
+
+        #box7 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+        }
+
+        #box7 img {
+            height: 280px;
+            width: 300px;
+        }
+
+        #box8 {
+            height: 380px;
+            width: 306px;
+            border: 2px solid black;
+            margin-left: 18px;
+            background-color: #fff;
+            padding: 20px 20px 20px 20px;
+            margin-top: 20px;
+        }
+
+        #box8 img {
+            height: 306px;
+            width: 300px;
+        }
+
+        .box img {
+            height: 135px;
+            width: 140px;
+            margin-top: 15px;
+            display: inline;
+        }
+
+        .box p {
+            font-size: 15px;
+            color: rgb(44, 75, 64);
+        }
+
+
+        footer {
+            margin-top: 100%px;
+            background-color: rgb(19, 26, 34);
+            height: 255px;
+            color: #fff;
+        }
+
+        .container2 {
+            margin-top: 0px;
+            height: 350px;
+            background-color: #232F3E;
+            display: flex;
+            flex-direction: row;
+
+
+        }
+
+        .container2 ul {
+            list-style: none;
+            margin-top: 50px;
+
+        }
+
+        .container2 li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            color: rgb(216, 214, 214);
+
+        }
+
+        .container2 li b {
+            color: white;
+            font-size: 18;
+        }
+
+        .boxx1 {
+            height: 300px;
+            width: 250px;
+            background-color: transparent;
+            color: #fff;
+            margin-left: 230px;
+
+        }
+
+        .boxx2 {
+            height: 300px;
+            width: 240px;
+            background-color: transparent;
+            color: #fff;
+            margin-left: 18px;
+        }
+
+        .boxx3 {
+            height: 300px;
+            width: 250px;
+            background-color: transparent;
+            color: #fff;
+            margin-left: 2px;
+        }
+
+        .boxx4 {
+            height: 300px;
+            width: 250px;
+            background-color: transparent;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        .container3 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: #232F3E;
+            height: 150px;
+            border-top: 0.2px solid rgb(88, 88, 88);
+
+
+        }
+
+        .container3 ul {
+            list-style: none;
+            display: flex;
+            color: white;
+            margin-left: 190px;
+        }
+
+        .container3 img {
+            height: 35px;
+            width: auto;
+            cursor: pointer;
+            background-color: transparent;
+            display: inline;
+            margin-left: 610px;
+            margin-top: 40px;
+
+        }
+
+        .container3 input {
+            display: block;
+            float: right;
+            margin-right: 600px;
+            margin-top: 39px;
+            padding: 0px 60px 10px 10px;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid white;
+            color: #fff;
+        }
+
+        .container3 li {
+            font-size: 15px;
+            padding-left: 10px;
+
+        }
+
+        footer table {
+            margin-left: 330px;
+            margin-top: 0px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 14px;
+            padding: 20px 20px 20px 20px;
+            width: 900px;
+            height: 200px;
+        }
+
+        footer thead {
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+
+        footer tbody {
+            color: #8e8e8e;
+            font-size: 13px;
+        }
+
+
+        footer p {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 2 0px;
+        }
+
+        .container4{
+            margin-top: 1150px;
+            margin-bottom: 0px;
+            
+        }
+
+        .container4 img{
+            width: 1470px;
+            border: 25px solid white;
+        }
+
+        .container5{
+            background-color: #fff;
+            margin: 20px 20px 20px 20px;
+            
+        }
+
+        .container5 span{
+            font-size: 20px;
+           
+        }
+
+        .imgg{
+            display: flex;
+            margin-left: 40px;
+            padding-left: 20px;
+        }
+
+        .imgg p{
+            background-color: red;
+            color: #fff;
+            width: 100px;
+        }
+
+        .imgg img{
+            margin-left: 30px;
+            margin-top: 13px;
+        }
+
+
+        
+
+        
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <ul class="tleft">
+            <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="">
+            <li>Deliver to Shikhar <br>
+                <b>Prayagraj 211008</b>
+            </li>
+        </ul>
+
+
+        <input class="tsearch" type="text" placeholder="search amazon.in">
+        <button type="submit"><img
+                src="https://play-lh.googleusercontent.com/GNBcszVkJtaZb_uUWPZRJnGjdjwU-cEtnsxHMxvO7FZcLe6z3g0SdFbI7fwf4BIi=w240-h480-rw"
+                alt="error"></button>
+
+        <ul class="tright">
+            <li style="padding-top: 10px;">Eng</li>
+            <li>hello, Shikhar <br>
+                <b>account & list</b>
+            </li>
+            <li>returns <br>& orders</li>
+            <li style="padding-top: 10px;">cart</li>
+        </ul>
+    </div>
+
+    <div class="two">
+        <ul>
+            <li style="list-style:georgian;"><b></b> All</li>
+            <li><b></b>Gift Card</li>
+            <li><b></b>Amazon MiniTv</li>
+            <li><b></b>Sell</li>
+            <li><b></b>Buy Again</li>
+            <li><b></b>Browsing History</li>
+            <li><b></b>Subscribe & Save</li>
+            <li><b></b>Pet Supplies</li>
+            <li style="float: right;">Great Freedom Sale | Shop Now ></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="wrapper">
+
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Aug23ART/GW/PC_Hero_3000x1200_ShopNow_EN_2x._CB599321536_.jpg"
+                alt="error">
+
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/0000AugART23MainHero/2xPCCBMain._CB599440422_.jpg"
+                alt="error">
+
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/tiyesum/AugART/realme/GW/605G/MainEvent/revised/D90885538_PC_Hero_3000x1200._CB599541990_.jpg"
+                alt="error">
+
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img12/KSD-Augustart-hero_PC-3000x1200-WO-PED_2._CB599271499_.jpg"
+                alt="error">
+
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PCA/AugART23/GW/KSD_PC_Hero_3000x1200._CB599376186_.jpg"
+                alt="error">
+
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Baby/D90989108_tallhero_EVENT_3000x1200._CB599432185_.jpg"
+                alt="error">
+
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/TVs/Nireeksh/AugART23/xiaomi3000x1200._CB599363753_.jpg"
+                alt="error">
+
+
+        </div>
+    </div>
+
+
+    <div class="box">
+
+        <div id="box1"><span>Keep Shoping For</span><br>
+
+            <img src="https://m.media-amazon.com/images/I/21wx2MaI-3L._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/31TMPDSuUXL._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/31vV+Z1skNL._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/21e4dbry40L._MCnd_AC_.jpg" alt="error">
+            <br>
+            <p>view your brosing history</p>
+        </div>
+        <div id="box2"><span>Starting $399 | Amazon Brand <br>& More</span><br>
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-1-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-4-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-3-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-2-1x._SY116_CB599377494_.png"
+                alt="error">
+            <br>
+            <p>see all offers</p>
+        </div>
+        <div id="box3"><span>50% to 80% off | Men's Fashion</span><br>
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/AugustART/PCQC/Sports_low._SY116_CB599280448_.jpg"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/AugustART/PCQC/Shoes_low._SY116_CB599280448_.jpg"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/AugustART/PCQC/Heels_low._SY116_CB599280448_.jpg"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/AugustART/PCQC/Hb_low._SY116_CB599280448_.jpg"
+                alt="error">
+            <br>
+            <p>see all deals</p>
+        </div>
+
+        <div id="box4"><span>Smartphones that suit your budget</span><br>
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-1-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-4-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-3-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-2-1x._SY116_CB599377494_.png"
+                alt="error">
+            <br>
+            <p>see all offers</p>
+        </div>
+
+        <div id="box5"><span>50% - 80% off | Shoes & handbags</span><br>
+            <img src="https://m.media-amazon.com/images/I/21wx2MaI-3L._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/31TMPDSuUXL._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/31vV+Z1skNL._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/21e4dbry40L._MCnd_AC_.jpg" alt="error">
+            <br>
+            <p>see all offers</p>
+        </div>
+
+
+        <div id="box6"><span>Up to 70% off | Home, kitchen & outdoors</span><br>
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-1-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-4-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-3-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-2-1x._SY116_CB599377494_.png"
+                alt="error">
+            <br>
+            <p>see all offers</p>
+        </div>
+        <div id="box7"><span>Starting ₹129 | Monitors, storage, accessories & more</span>
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/aa23/pdacc/gw/unrec/PC_CC_379x304._SY304_CB599426206_.jpg"
+                alt="">
+            <!--          <img src="https://m.media-amazon.com/images/I/21wx2MaI-3L._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/31TMPDSuUXL._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/31vV+Z1skNL._MCnd_AC_.jpg" alt="error">
+            <img src="https://m.media-amazon.com/images/I/21e4dbry40L._MCnd_AC_.jpg" alt="error">-->
+            <br>
+            <p>see all offers</p>
+        </div>
+        <div id="box8"><span>Up to 35% off on medicines</span>
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Pharmacy/AUG23/PC_CC_379x304_AUGART._SY304_CB599354219_.jpg"
+                alt="">
+            <!--        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-1-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-4-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-3-1x._SY116_CB599377494_.png"
+                alt="error">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/Event/Gateway/AugART/QC/PCQC/Rev/MF-2-1x._SY116_CB599377494_.png"
+                alt="error">-->
+            <br>
+            <p>see all offers</p>
+        </div>
+
+    </div>
+
+    <div class="container4">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/AugART/V6/GWeditorial_2300x646._CB599389263_.jpg"
+                alt="error">
+    </div>
+
+    <div class="container5">
+        <span>Todays Deals</span><span> &#160 &#160  &#160  &#160see all details</span> <br>
+        <div class="imgg">
+        <div><img src="https://m.media-amazon.com/images/I/31ycSh6c2EL._AC_SY200_.jpg" alt=""><p>up to 60% off</p><br>Extended Freedom Sale on one plus..</div>
+        <div><img src="https://m.media-amazon.com/images/I/31sIEzlmGTL._AC_SY200_.jpg" alt=""><p>up to 60% off</p><br>Branded Suitcase Set...</div>
+        <div><img src="https://m.media-amazon.com/images/I/41W7U1ZQhDL._AC_SY200_.jpg" alt=""><p>up to 60% off</p><br>Top deal on Fasttrack..</div>
+        <div><img src="https://m.media-amazon.com/images/I/81jemWSdL9L._SL1500__AC_SY200_.jpg" alt=""><p>up to 60% off</p><br>Starting 299 Footwear..</div>
+        <div><img src="https://m.media-amazon.com/images/I/51dtEUJ0gbL._AC_SY200_.jpg" alt=""><p>up to 60% off</p><br>End of moonson sale</div>
+        <div><img src="https://m.media-amazon.com/images/I/41sx753+kXL._AC_SY200_.jpg" alt=""><p>up to 60% off</p><br>lowest price sale</div>
+    </div></div>
+
+    <div class="container2">
+        <div class="boxx1">
+            <ul>
+                <li><b>Get to Know Us</b></li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Press Releases</li>
+                <li>Amazon Science</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="boxx2">
+            <ul>
+                <li><b>Connect with Us</b></li>
+                <li>Facebook</li>
+                <li>twitter</li>
+                <li>Instagram</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="boxx3">
+            <ul>
+                <li><b>Make Money With Us</b></li>
+                <li>Sell on Amazon</li>
+                <li>Sell under Amazon Accelerator</li>
+                <li>Protect and Build Your Brand</li>
+                <li>Amazon Global Selling</li>
+                <li>Become an Affiliate</li>
+                <li>Fulfilment by Amazon</li>
+                <li>Advertise Your Products</li>
+                <li>Amazon Pay on Merchants</li>
+            </ul>
+        </div>
+        <div class="boxx4">
+            <ul>
+                <li><b>Let Us Help You</b></li>
+                <li>COVID-19 and Amazon</li>
+                <li>Your Account</li>
+                <li>Returns Centre</li>
+                <li>100% Purchase Protection</li>
+                <li>Amazon App Download</li>
+                <li>Help</li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container3">
+        <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="error">
+        <input type="button" value="English">
+        <ul>
+            <li>England</li>
+            <li>Australia</li>
+            <li>India</li>
+            <li>USA</li>
+            <li>Chaina</li>
+            <li>Poland</li>
+            <li>Germany</li>
+            <li>Japan</li>
+            <li>Italy</li>
+            <li>Mexico</li>
+            <li>Neitherland</li>
+            <li>Singapore</li>
+            <li>Spain</li>
+            <li>Brazil</li>
+            <li>Turkey</li>
+            <li>United State</li>
+            <li>France</li>
+        </ul>
+    </div>
+
+    <footer>
+        <table>
+            <thead>
+                <tr>
+                    <th>Abebooks</th>
+                    <th>Amazon Web Series</th>
+                    <th>Audible</th>
+                    <th>DPReview</th>
+                    <th>IMDB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>Books, art <br>
+                    & collectibles</td>
+                <td>Scalable Cloud <br>
+                    Computing Services</td>
+                <td>Download <br>
+                    Audio Books</td>
+                <td>Digital <br>
+                    Photography</td>
+                <td>Movies, TV <br>
+                    & Celebrities</td>
+            </tbody>
+            <thead>
+                <th>Shopbop</th>
+                <th>Amazon Business</th>
+                <th>Prime Now</th>
+                <th>Amazon Prime Music</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <td>Designer <br>
+                    Fashion Brands</td>
+                <td>Everything For <br>
+                    Your Business</td>
+                <td>2-Hour Delivery <br>
+                    on Everyday Items</td>
+                <td>100 million songs, ad-free <br>
+                    Over 15 million podcast episodes</td>
+                <td></td>
+            </tbody>
+        </table>
+        <p>Conditions of Use & Sale Privacy Notice Interest-Based Ads <br>
+            © 1996-2023, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+
+
+</body>
+
+</html>
